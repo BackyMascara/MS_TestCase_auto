@@ -1,17 +1,15 @@
-import json
-
 import requests
-import jsonpath
 from common.getKeyword_forResult import GetKeyword
 from common.getExcel import GetExcel
 from common.getExcel import GetExcels
 
-my_time = '20240204-20240223' # *必填，迭代周期
+# *必填my_time，迭代周期
+my_time = '20240204-20240223'
 requirementKey = 'Q00001705'
-# *必填，需求文档编码
+# *必填requirementKeys，需求文档编码
 requirementKeys = ('Q00002293', 'Q00002292','Q00002291','Q00002290','Q00002289')
-
 req_url = 'https://mgt.mysteelcms.com/dataspider-multi/api/spiderRequirement/requirementDetail/{}'.format(requirementKey)
+# *必填，Cookie
 headers = {"Cookie":"JSESSIONID=14BB3A171EF932E823AAEE115702D5C4; _login_token=d1311fd74fdf4efe936f545ca43fe8dc; _center_login_token=d1311fd74fdf4efe936f545ca43fe8dc; _last_loginaid=124e5e35196b0e0c3b47df1e1d30838f; mysteel_sso_ticket=3d5d75e9fe4e4ee5b36d0fd6d3b2de26; JSESSIONID=4DCCD47BF1201A99BD2E1C9F0559A799"}
 def getRequirment():
     res = requests.request(method='get',url=req_url,headers=headers)
