@@ -4,13 +4,13 @@ from common.getExcel import GetExcel
 from common.getExcel import GetExcels
 
 # *必填my_time，迭代周期
-my_time = '20240204-20240223'
+my_time = '20240226-20240308'
 requirementKey = 'Q00001705'
 # *必填requirementKeys，需求文档编码
-requirementKeys = ('Q00002293', 'Q00002292','Q00002291','Q00002290','Q00002289')
+requirementKeys = ('Q00002528', 'Q00002525','Q00002523','Q00002522','Q00002521','Q00002520','Q00002510','Q00002501','Q00002497','Q00002480','Q00002470','Q00002461','Q00002457','Q00002456','Q00002450','Q00002429','Q00002426','Q00002425','Q00002401','Q00002396','Q00002390','Q00002389','Q00002388','Q00002387','Q00002385','Q00002374','Q00002373','Q00002362','Q00002370')
 req_url = 'https://mgt.mysteelcms.com/dataspider-multi/api/spiderRequirement/requirementDetail/{}'.format(requirementKey)
 # *必填，Cookie
-headers = {"Cookie":"JSESSIONID=14BB3A171EF932E823AAEE115702D5C4; _login_token=d1311fd74fdf4efe936f545ca43fe8dc; _center_login_token=d1311fd74fdf4efe936f545ca43fe8dc; _last_loginaid=124e5e35196b0e0c3b47df1e1d30838f; mysteel_sso_ticket=3d5d75e9fe4e4ee5b36d0fd6d3b2de26; JSESSIONID=4DCCD47BF1201A99BD2E1C9F0559A799"}
+headers = {"Cookie":"JSESSIONID=E99332FE3B53EDF95A9967BC1BE470E7; _login_token=db65df3bec6a45d78254284f8386b019; _center_login_token=db65df3bec6a45d78254284f8386b019; _last_loginaid=4a4cab8a25323d3d2e03363b2d0ad413; mysteel_sso_ticket=aebebf506e6a48048f3bc278e3b91e0d; JSESSIONID=D54A9E367364E4188ED1551CE9E16D55"}
 def getRequirment():
     res = requests.request(method='get',url=req_url,headers=headers)
     res = res.json()

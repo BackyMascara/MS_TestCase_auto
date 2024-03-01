@@ -1,5 +1,6 @@
 from openpyxl import load_workbook
 
+# 1.save_url需要改变本地路径
 def GetExcel(my_time,requirementNames,tableNames,fieldNames):
     """
     用于对单个需求文档，编写Excel测试用例
@@ -112,7 +113,7 @@ def GetExcels(my_time,requirementNames,tableNames,fieldNames):
         j = index * 23 + 2
 
     # 保存修改并关闭Excel文件
-    save_url = r'E:\测试用例-fl\爬虫\{}\测试用例-{}.xlsx'.format(my_time, "test")
+    save_url = r'E:\测试用例-fl\爬虫\2数据质检\{}\测试用例-{}.xlsx'.format(my_time, "test")
     wb.save(save_url)
     wb.close()
 
